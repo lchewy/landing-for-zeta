@@ -22,11 +22,8 @@ input {
   background-size: cover;
   padding-bottom: 5rem;
 
-  //   &__left {
-  //     background-color: green;
-  //   }
+  
   &__right {
-    // background-color: orange;
 
     &-promotion {
       position: absolute;
@@ -36,7 +33,7 @@ input {
       border-radius: 50%;
       text-align: center;
       bottom: 4rem;
-      right: 15%;
+      right: 11%;
       z-index: 10;
       &-content {
         position: relative;

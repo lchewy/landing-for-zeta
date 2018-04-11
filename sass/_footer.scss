@@ -1,3 +1,12 @@
 .footer {
-  background-color: yellowgreen;
+  text-align: center;
+  margin-top: 10rem;
+  font-size: .8rem;
+  color: #c6c6c6;
+
+  &__row{
+    max-width: 90rem;
+  }
+
+
 }
