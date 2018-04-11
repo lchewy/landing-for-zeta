@@ -1,0 +1,201 @@
+/* 
+  
+  0 - 600px:    Phone
+  600 - 900px:  Tablet portrait
+  900 - 1200px: Tablet landscape
+  [1200 - 1800] is where our normal style apply
+  1800px + :    Big Desktop 
+  
+  */
+/*
+  $breakpoint argument choices:
+  - phone 
+  - tab-port
+  - tab-land
+  - big-desktop
+  
+  1em == 16px;
+  
+  
+  rem does not work in media queries 
+  they will always default to browser's 16px unless specifically changed
+  we will be using em instead
+  
+  Order: Base + typography > general layout > grid > page layout > components
+  
+  */
+.row {
+  max-width: 100%;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 2rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 *6rem); }
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  font-family: 'Roboto', sans-serif; }
+
+input {
+  position: relative;
+  margin: 1rem 2.5rem;
+  border-radius: 4px;
+  padding: 1.5rem;
+  border: 0px solid #ccc;
+  display: block;
+  left: 1rem;
+  font-size: 1rem; }
+
+.header {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 99%), url("../img/hero4.jpg");
+  background-size: cover;
+  padding-bottom: 5rem; }
+  .header__right-promotion {
+    position: absolute;
+    height: 25rem;
+    width: 25rem;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    bottom: 4rem;
+    right: 15%;
+    z-index: 10; }
+    .header__right-promotion-content {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: 100; }
+      .header__right-promotion-content-1 {
+        color: #757777;
+        font-size: 1.5rem; }
+      .header__right-promotion-content-2 {
+        font-size: 2.5rem;
+        margin-top: -1rem; }
+      .header__right-promotion-content-3 {
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 1rem; }
+      .header__right-promotion-content-4, .header__right-promotion-content-5 {
+        font-size: 1.5rem; }
+  .header__form-box {
+    padding: 1rem 0rem;
+    position: relative;
+    margin-top: 5rem;
+    left: 25%;
+    width: 60%;
+    background-color: #0e2851;
+    text-align: center;
+    border-radius: 20px; }
+    .header__form-box-title {
+      position: relative;
+      margin: 0 2.5rem;
+      padding-top: 2rem;
+      color: #ccc;
+      font-size: 1.6rem;
+      font-weight: 100; }
+  .header__form-input {
+    width: 80%; }
+  .header__form-checkbox {
+    border-radius: 50%; }
+  .header__form-disclaimer {
+    color: #ccc;
+    text-align: left;
+    margin: 0rem 3.5rem;
+    font-size: 0.8rem; }
+  .header__form-submit {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    padding: 1.2rem;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a40cb2;
+    cursor: pointer; }
+
+.heading {
+  position: relative;
+  color: #0e2851; }
+  .heading__left-sup-1 {
+    font-family: "Dancing Script", cursive;
+    margin-top: 3rem;
+    font-size: 4rem;
+    position: relative;
+    left: 25%; }
+  .heading__left-sub-1 {
+    position: relative;
+    left: 25%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem; }
+
+.heading__right {
+  position: relative;
+  margin-top: 4rem;
+  left: 39%;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem; }
+  .heading__right-logo {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.5rem;
+    fill: #0a567f; }
+  .heading__right-heading-box {
+    display: inline-block;
+    text-transform: uppercase; }
+  .heading__right-sup-2 {
+    color: #2cb7ba; }
+  .heading__right-sub-2 {
+    color: #0e2851; }
+
+.big {
+  color: #a40cb2;
+  font-size: 5rem;
+  position: relative;
+  top: 1rem; }
+
+.features {
+  background-color: blueviolet; }
+
+.details {
+  background-color: pink; }
+
+.footer {
+  background-color: yellowgreen; }
