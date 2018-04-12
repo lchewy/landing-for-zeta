@@ -63,6 +63,9 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   background: url("../img/chevron-down.png") 95%/5% no-repeat #fff; }
+  @media only screen and (max-width: 62.5em) {
+    select {
+      background: url("../img/chevron-down.png") 98%/2% no-repeat #fff; } }
 
 select::-ms-expand {
   display: none; }
@@ -85,13 +88,17 @@ select::-ms-expand {
 
 .header {
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 105%), url("../img/background.jpg");
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 72%, white 100%), url(../img/background.jpg) no-repeat center center;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 72%, white 100%), url(../img/background.jpg) no-repeat center center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 69%, white 100%), url(../img/background.jpg) no-repeat center center;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
   background-size: cover;
   padding-bottom: 5rem; }
   @media only screen and (max-width: 62.5em) {
     .header {
-      background-size: 100% auto;
-      background-repeat: no-repeat; } }
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top; } }
   .header__right {
     overflow: hidden;
     position: relative;
@@ -123,6 +130,11 @@ select::-ms-expand {
     background-color: #0e2851;
     text-align: center;
     border-radius: 20px; }
+    @media only screen and (max-width: 62.5em) {
+      .header__form-box {
+        width: 95%;
+        left: 2.5%;
+        text-align: center; } }
     .header__form-box-title {
       position: relative;
       margin: 0 2.5rem;
@@ -132,6 +144,9 @@ select::-ms-expand {
       font-weight: 100; }
   .header__form-input {
     width: 80%; }
+    @media only screen and (max-width: 62.5em) {
+      .header__form-input {
+        width: 92%; } }
   .header__form-checkbox {
     border-radius: 50%; }
   .header__form-disclaimer {
@@ -152,16 +167,28 @@ select::-ms-expand {
     color: #fff;
     background-color: #a40cb2;
     cursor: pointer; }
+    @media only screen and (max-width: 62.5em) {
+      .header__form-submit {
+        position: relative;
+        left: 5%; } }
 
 @media only screen and (max-width: 62.5em) {
   .heading {
-    display: block;
-    text-align: left; } }
+    display: flex;
+    flex-direction: column-reverse; } }
 
 .heading__left {
   position: relative;
   left: 12%;
   top: 2rem; }
+  @media only screen and (max-width: 75em) {
+    .heading__left {
+      width: 20rem;
+      height: 5rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .heading__left {
+      width: 15rem;
+      height: 3rem; } }
 
 .heading__right {
   position: relative;
@@ -169,11 +196,12 @@ select::-ms-expand {
   left: 39%; }
   @media only screen and (max-width: 75em) {
     .heading__right {
-      left: 28%; } }
+      left: 35%; } }
   @media only screen and (max-width: 62.5em) {
     .heading__right {
-      display: block;
-      left: 13%; } }
+      left: 10%;
+      width: 20rem;
+      height: 5rem; } }
 
 .big {
   color: #a40cb2;
