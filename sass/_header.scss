@@ -22,14 +22,36 @@ input {
   background-size: cover;
   padding-bottom: 5rem;
 
+  @include respond(tab-port){
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
   
   &__right {
     overflow: hidden;
-    &-promotion {
-      position: absolute;
-      bottom: 6rem;
-      right: 11%;
-      z-index: 10;
+
+    position: relative;
+    top: 32rem;
+    left: 30rem;
+
+    @include respond(tab-land){
+      left: 15rem;
+      width: 25rem;
+      height: 25rem;
+    }
+
+    @include respond(tab-port){
+      top:3rem;
+      left: 40%;
+      box-shadow: 0 1rem 3rem rgba(#000, .1);
+      border-radius: 50%;
+      width: 20rem;
+      height: 20rem;
+    }
+
+    @include respond(phone){
+      width: 15rem;
+      height: 15rem;
     }
   }
 
@@ -87,21 +109,30 @@ input {
 }
 
 .heading {
-  
+  @include respond(tab-port){
+    display: block;
+    text-align: left;
+  }
   &__left{
     position: relative;
-    left: 25%;
+    left: 12%;
     top: 2rem;
   }
-}
 
-.heading__right {
-  position: relative;
-  margin-top: 4rem;
-  left: 39%;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05rem;
+  &__right{
+    position: relative;
+    margin-top: 4rem;
+    left: 39%;
+
+    @include respond(tab-land){
+      left: 28%;
+    }
+
+    @include respond(tab-port){
+      display: block;
+      left: 13%
+    }
+  }
 }
 
 .big {

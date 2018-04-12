@@ -1,29 +1,3 @@
-/* 
-  
-  0 - 600px:    Phone
-  600 - 900px:  Tablet portrait
-  900 - 1200px: Tablet landscape
-  [1200 - 1800] is where our normal style apply
-  1800px + :    Big Desktop 
-  
-  */
-/*
-  $breakpoint argument choices:
-  - phone 
-  - tab-port
-  - tab-land
-  - big-desktop
-  
-  1em == 16px;
-  
-  
-  rem does not work in media queries 
-  they will always default to browser's 16px unless specifically changed
-  we will be using em instead
-  
-  Order: Base + typography > general layout > grid > page layout > components
-  
-  */
 .row {
   max-width: 100%;
   margin: 0 auto; }
@@ -37,6 +11,9 @@
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+    @media only screen and (max-width: 62.5em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -62,6 +39,9 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
@@ -82,13 +62,32 @@ input {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 105%), url("../img/background.jpg");
   background-size: cover;
   padding-bottom: 5rem; }
+  @media only screen and (max-width: 62.5em) {
+    .header {
+      background-size: 100% auto;
+      background-repeat: no-repeat; } }
   .header__right {
-    overflow: hidden; }
-    .header__right-promotion {
-      position: absolute;
-      bottom: 6rem;
-      right: 11%;
-      z-index: 10; }
+    overflow: hidden;
+    position: relative;
+    top: 32rem;
+    left: 30rem; }
+    @media only screen and (max-width: 75em) {
+      .header__right {
+        left: 15rem;
+        width: 25rem;
+        height: 25rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .header__right {
+        top: 3rem;
+        left: 40%;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        width: 20rem;
+        height: 20rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__right {
+        width: 15rem;
+        height: 15rem; } }
   .header__form-box {
     padding: 1rem 0rem;
     position: relative;
@@ -128,18 +127,27 @@ input {
     background-color: #a40cb2;
     cursor: pointer; }
 
+@media only screen and (max-width: 62.5em) {
+  .heading {
+    display: block;
+    text-align: left; } }
+
 .heading__left {
   position: relative;
-  left: 25%;
+  left: 12%;
   top: 2rem; }
 
 .heading__right {
   position: relative;
   margin-top: 4rem;
-  left: 39%;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05rem; }
+  left: 39%; }
+  @media only screen and (max-width: 75em) {
+    .heading__right {
+      left: 28%; } }
+  @media only screen and (max-width: 62.5em) {
+    .heading__right {
+      display: block;
+      left: 13%; } }
 
 .big {
   color: #a40cb2;
@@ -156,8 +164,14 @@ input {
     width: 16rem;
     height: 16rem;
     padding: 2rem; }
-    .features__icon-confirm {
-      transform: rotate(90deg); }
+    @media only screen and (max-width: 75em) {
+      .features__icon {
+        width: 13rem;
+        height: 13rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .features__icon {
+        width: 11rem;
+        height: 11rem; } }
   .features__heading {
     text-transform: uppercase;
     margin: 1.5rem 0;
@@ -168,6 +182,10 @@ input {
     text-align: left;
     font-size: 1.4rem;
     font-weight: 100; }
+    @media only screen and (max-width: 62.5em) {
+      .features__text {
+        text-align: center;
+        margin-bottom: 3rem; } }
 
 .details {
   margin-top: 5rem; }
@@ -176,6 +194,10 @@ input {
   .details__text {
     font-size: 1.5rem;
     color: #757777; }
+    @media only screen and (max-width: 62.5em) {
+      .details__text {
+        text-align: center;
+        font-size: 1.2rem; } }
   .details__bold {
     font-weight: 700;
     color: #0e2851; }
@@ -185,5 +207,8 @@ input {
   margin-top: 10rem;
   font-size: .9rem;
   color: #c6c6c6; }
+  @media only screen and (max-width: 62.5em) {
+    .footer {
+      font-size: .7rem; } }
   .footer__row {
     max-width: 105rem; }

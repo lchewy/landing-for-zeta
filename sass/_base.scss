@@ -12,10 +12,13 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
+
+  @include respond(phone){
+    font-size: 50%;
+  }
 }
 
 body {
   box-sizing: border-box;
-  // padding: 3rem;
   font-family: 'Lato', sans-serif; 
 }

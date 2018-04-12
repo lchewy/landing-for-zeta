@@ -8,6 +8,11 @@
     &__text{
         font-size: 1.5rem;
         color: #757777;
+
+        @include respond(tab-port){
+            text-align: center;
+            font-size: 1.2rem;
+        }
     }
 
     &__bold{

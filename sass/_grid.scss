@@ -1,5 +1,5 @@
-$grid-width: 100%;//120rem;//114rem;
-$gutter-vertical: 3rem; // was 8rem but still no change...
+$grid-width: 100%;
+$gutter-vertical: 3rem; 
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
 
@@ -7,16 +7,8 @@ $gutter-horizontal: 6rem;
     max-width: $grid-width;
     margin: 0 auto; 
   
-    // @include respond(tab-port) {
-    //   max-width: 50rem;
-    //   padding: 0 3rem;
-    // }
-  
     &:not(:last-child) {
       margin-bottom: $gutter-vertical;
-    //   @include respond(tab-port) {
-    //     margin-bottom: $gutter-vertical-small;
-    //   }
     }
   
   
@@ -26,16 +18,12 @@ $gutter-horizontal: 6rem;
       float: left; 
       &:not(:last-child) {
         margin-right: $gutter-horizontal;
-  
-        // @include respond(tab-port) {
-        //   margin-right: 0;
-        //   margin-bottom: $gutter-vertical-small;
-        // }
+
       }
   
-    //   @include respond(tab-port) {
-    //     width: 100% !important;
-    //   }
+      @include respond(tab-port) {
+        width: 100% !important;
+      }
     }
   
     .col-1-of-2 {
