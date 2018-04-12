@@ -101,6 +101,7 @@ select::-ms-expand {
     @include respond(phone) {
       width: 15rem;
       height: 15rem;
+      left: 35%;
     }
   }
 
@@ -136,6 +137,10 @@ select::-ms-expand {
       @include respond(tab-port){
         width: 92%;
         // text-align: center;
+      }
+
+      @include respond(phone){
+        width: 85%;
       }
     }
 
@@ -211,6 +216,7 @@ select::-ms-expand {
       width:20rem;
       height: 5rem;
     }
+
   }
 }
 

@@ -8,7 +8,7 @@
   
   @mixin respond($breakpoint){
     @if $breakpoint==phone {
-      @media only screen and (max-width: 37.5em) {@content}; // 900px / 16px = 37.5em
+      @media only screen and (max-width: 31.25em) {@content}; // 500px / 16px = 31.25em
     }
     @if $breakpoint==tab-port {
       @media only screen and (max-width: 62.5em) {@content}; // 1000 / 16px = 62.5em
