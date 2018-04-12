@@ -174,7 +174,7 @@ input {
   .details__row {
     max-width: 105rem; }
   .details__text {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #757777; }
   .details__bold {
     font-weight: 700;
@@ -183,7 +183,7 @@ input {
 .footer {
   text-align: center;
   margin-top: 10rem;
-  font-size: .8rem;
+  font-size: .9rem;
   color: #c6c6c6; }
   .footer__row {
     max-width: 105rem; }
