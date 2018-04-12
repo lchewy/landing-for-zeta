@@ -180,6 +180,8 @@ select::-ms-expand {
     position: relative;
     left: 12%;
     top: 2rem;
+    width: 40rem;
+    height: 10rem;
 
     @include respond(tab-land){
       width: 20rem;
@@ -195,15 +197,17 @@ select::-ms-expand {
     position: relative;
     // margin-top: -2rem;
     top: -4rem;
-    left: 39%;
+    left: 45%;
 
     @include respond(tab-land) {
-      left: 35%;
+      top: 2rem;
+      left: 50%;
     }
 
     @include respond(tab-port) {
       // display: block;
       left: 10%;
+      margin-bottom: 2rem;
       width:20rem;
       height: 5rem;
     }

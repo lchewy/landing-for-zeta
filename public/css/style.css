@@ -180,7 +180,9 @@ select::-ms-expand {
 .heading__left {
   position: relative;
   left: 12%;
-  top: 2rem; }
+  top: 2rem;
+  width: 40rem;
+  height: 10rem; }
   @media only screen and (max-width: 75em) {
     .heading__left {
       width: 20rem;
@@ -193,13 +195,15 @@ select::-ms-expand {
 .heading__right {
   position: relative;
   top: -4rem;
-  left: 39%; }
+  left: 45%; }
   @media only screen and (max-width: 75em) {
     .heading__right {
-      left: 35%; } }
+      top: 2rem;
+      left: 50%; } }
   @media only screen and (max-width: 62.5em) {
     .heading__right {
       left: 10%;
+      margin-bottom: 2rem;
       width: 20rem;
       height: 5rem; } }
 
