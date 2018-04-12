@@ -29,7 +29,9 @@ $(function() {
     return false;
   }, "Please enter a nine digit phone number");
 
-  $("#form").validate({
+  var myForm = $("#form");
+
+  $(myForm).validate({
     rules: {
       fname: {
         required: true,
@@ -50,6 +52,14 @@ $(function() {
       phone: {
         required: true,
         validPhone: true
+      }
+    },
+    submitHandler: function(){
+
+      var newPhone = $("#phone").val().match(/([0-9])/g).join("");
+      $("#phone").val(newPhone);
+      if(myForm.valid()){
+        window.location.href= "step2.html";
       }
     }
   });

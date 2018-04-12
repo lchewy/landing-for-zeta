@@ -1,6 +1,7 @@
 $color-dark-blue: #0e2851;
 
-input {
+input,
+select {
   position: relative;
   margin: 1rem 2.5rem;
   border-radius: 4px;
@@ -9,6 +10,30 @@ input {
   display: block;
   left: 1rem;
   font-size: 1rem;
+  color: #999797;
+  // background: #eee;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("../img/chevron-down.png") 95% / 5% no-repeat #fff;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #797878;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #3d3b3b;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #3d3b3b;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #3d3b3b;
 }
 
 .header {
@@ -22,34 +47,36 @@ input {
   background-size: cover;
   padding-bottom: 5rem;
 
-  @include respond(tab-port){
+  @include respond(tab-port) {
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
-  
+
   &__right {
     overflow: hidden;
 
     position: relative;
-    top: 32rem;
+    // top: 32rem;
+    // top: 80%;
+    bottom: -28rem;
     left: 30rem;
 
-    @include respond(tab-land){
+    @include respond(tab-land) {
       left: 15rem;
       width: 25rem;
       height: 25rem;
     }
 
-    @include respond(tab-port){
-      top:3rem;
+    @include respond(tab-port) {
+      top: 3rem;
       left: 40%;
-      box-shadow: 0 1rem 3rem rgba(#000, .1);
+      box-shadow: 0 1rem 3rem rgba(#000, 0.1);
       border-radius: 50%;
       width: 20rem;
       height: 20rem;
     }
 
-    @include respond(phone){
+    @include respond(phone) {
       width: 15rem;
       height: 15rem;
     }
@@ -109,28 +136,28 @@ input {
 }
 
 .heading {
-  @include respond(tab-port){
+  @include respond(tab-port) {
     display: block;
     text-align: left;
   }
-  &__left{
+  &__left {
     position: relative;
     left: 12%;
     top: 2rem;
   }
 
-  &__right{
+  &__right {
     position: relative;
     margin-top: 4rem;
     left: 39%;
 
-    @include respond(tab-land){
+    @include respond(tab-land) {
       left: 28%;
     }
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
       display: block;
-      left: 13%
+      left: 13%;
     }
   }
 }
