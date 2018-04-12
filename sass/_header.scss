@@ -24,7 +24,7 @@ input {
 
   
   &__right {
-
+    overflow: hidden;
     &-promotion {
       position: absolute;
       height: 25rem;
@@ -150,6 +150,7 @@ input {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
+  
 
   &-logo {
     display: inline-block;

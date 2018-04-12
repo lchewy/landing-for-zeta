@@ -25,7 +25,7 @@
   
   */
 .row {
-  max-width: 120rem;
+  max-width: 100%;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 3rem; }
@@ -50,6 +50,9 @@
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 *6rem); }
 
+.error {
+  color: #e74c3c; }
+
 *,
 *::after,
 *::before {
@@ -62,8 +65,7 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Lato', sans-serif; }
 
 input {
   position: relative;
@@ -80,35 +82,37 @@ input {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 99%), url("../img/hero4.jpg");
   background-size: cover;
   padding-bottom: 5rem; }
-  .header__right-promotion {
-    position: absolute;
-    height: 25rem;
-    width: 25rem;
-    background-color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    bottom: 4rem;
-    right: 11%;
-    z-index: 10; }
-    .header__right-promotion-content {
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2rem;
-      font-weight: 100; }
-      .header__right-promotion-content-1 {
-        color: #757777;
-        font-size: 1.5rem; }
-      .header__right-promotion-content-2 {
-        font-size: 2.5rem;
-        margin-top: -1rem; }
-      .header__right-promotion-content-3 {
-        font-size: 3rem;
-        font-weight: 400;
-        margin-bottom: 1rem; }
-      .header__right-promotion-content-4, .header__right-promotion-content-5 {
-        font-size: 1.5rem; }
+  .header__right {
+    overflow: hidden; }
+    .header__right-promotion {
+      position: absolute;
+      height: 25rem;
+      width: 25rem;
+      background-color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      bottom: 4rem;
+      right: 11%;
+      z-index: 10; }
+      .header__right-promotion-content {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-weight: 100; }
+        .header__right-promotion-content-1 {
+          color: #757777;
+          font-size: 1.5rem; }
+        .header__right-promotion-content-2 {
+          font-size: 2.5rem;
+          margin-top: -1rem; }
+        .header__right-promotion-content-3 {
+          font-size: 3rem;
+          font-weight: 400;
+          margin-bottom: 1rem; }
+        .header__right-promotion-content-4, .header__right-promotion-content-5 {
+          font-size: 1.5rem; }
   .header__form-box {
     padding: 1rem 0rem;
     position: relative;

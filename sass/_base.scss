@@ -1,3 +1,7 @@
+.error {
+  color: #e74c3c;
+}
+
 *,
 *::after,
 *::before {
@@ -12,6 +16,6 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
-  font-family: 'Roboto', sans-serif; 
+  // padding: 3rem;
+  font-family: 'Lato', sans-serif; 
 }
