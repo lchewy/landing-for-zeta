@@ -1,19 +1,15 @@
 .features{
-    // background-color: blueviolet;
     text-align: center;
     overflow: hidden;
 
     &__row{
-        max-width: 90rem;
+        max-width: 105rem;
     }
 
     &__icon{
-        width: 10rem;
-        height: 10rem;
+        width: 16rem;
+        height: 16rem;
         padding: 2rem;
-        fill: #fff;
-        background-color: $color-dark-blue;
-        border-radius: 50%;
 
         &-confirm{
             transform: rotate(90deg);
@@ -23,14 +19,14 @@
     &__heading{
         text-transform: uppercase;
         margin: 1.5rem 0;
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         color: $color-dark-blue;
     }
 
     &__text{
         color: #757777;
         text-align: left;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 100;
     }
 }

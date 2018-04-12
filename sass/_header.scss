@@ -16,9 +16,9 @@ input {
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1) 99%
+      rgba(255, 255, 255, 1) 105%
     ),
-    url("../img/hero4.jpg");
+    url("../img/background.jpg");
   background-size: cover;
   padding-bottom: 5rem;
 
@@ -27,44 +27,9 @@ input {
     overflow: hidden;
     &-promotion {
       position: absolute;
-      height: 25rem;
-      width: 25rem;
-      background-color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      bottom: 4rem;
+      bottom: 6rem;
       right: 11%;
       z-index: 10;
-      &-content {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2rem;
-        font-weight: 100;
-
-        &-1 {
-          color: #757777;
-          font-size: 1.5rem;
-        }
-
-        &-2 {
-          font-size: 2.5rem;
-          // font-weight: 100;
-          margin-top: -1rem;
-        }
-
-        &-3 {
-          font-size: 3rem;
-          font-weight: 400;
-          margin-bottom: 1rem;
-        }
-
-        &-4,
-        &-5 {
-          font-size: 1.5rem;
-        }
-      }
     }
   }
 
@@ -122,24 +87,11 @@ input {
 }
 
 .heading {
-  // text-align: center;
-  // left: 50%
-  position: relative;
-  color: $color-dark-blue;
-  &__left-sup-1 {
-    font-family: "Dancing Script", cursive;
-    margin-top: 3rem;
-    font-size: 4rem;
+  
+  &__left{
     position: relative;
     left: 25%;
-  }
-
-  &__left-sub-1 {
-    position: relative;
-    left: 25%;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-size: 2.5rem;
+    top: 2rem;
   }
 }
 
@@ -150,27 +102,6 @@ input {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  
-
-  &-logo {
-    display: inline-block;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0.5rem;
-    fill: #0a567f;
-  }
-  &-heading-box {
-    display: inline-block;
-    text-transform: uppercase;
-  }
-
-  &-sup-2 {
-    color: #2cb7ba;
-  }
-
-  &-sub-2 {
-    color: $color-dark-blue;
-  }
 }
 
 .big {
@@ -178,5 +109,4 @@ input {
   font-size: 5rem;
   position: relative;
   top: 1rem;
-  // margin-top: .5rem;
 }
