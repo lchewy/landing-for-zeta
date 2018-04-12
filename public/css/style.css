@@ -192,7 +192,7 @@ select::-ms-expand {
 
 .heading__right {
   position: relative;
-  margin-top: 4rem;
+  top: -4rem;
   left: 39%; }
   @media only screen and (max-width: 75em) {
     .heading__right {
